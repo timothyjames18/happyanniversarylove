@@ -1,366 +1,697 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Happy Anniversary, Rhian 💜</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Anniversary, Rhian 💜</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+              * {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+                  -webkit-tap-highlight-color: transparent;
+              }
 
-  :root {
-    --violet: #b57bee;
-    --lavender: #c9a0f5;
-    --lavender-light: #e0c8ff;
-    --lavender-pale: #ede0ff;
-  }
+              :root {
+                  --violet: #b57bee;
+                  --lavender: #c9a0f5;
+                  --lavender-light: #e0c8ff;
+                  --lavender-pale: #ede0ff;
+              }
 
-  html, body {
-    width: 100%; min-height: 100vh;
-    font-family: 'Lato', sans-serif;
-    overflow-x: hidden;
-  }
+              html, body {
+                  width: 100%;
+                  min-height: 100vh;
+                  font-family: 'Lato', sans-serif;
+                  overflow-x: hidden;
+              }
 
-  body {
-    background: radial-gradient(ellipse at 30% 20%, #2a1040 0%, #0e0818 50%, #07030f 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    position: relative;
-  }
+              body {
+                  background: radial-gradient(ellipse at 30% 20%, #2a1040 0%, #0e0818 50%, #07030f 100%);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  min-height: 100vh;
+                  position: relative;
+              }
 
-  /* ── Orbs ── */
-  .orb {
-    position: fixed;
-    border-radius: 50%;
-    filter: blur(70px);
-    pointer-events: none;
-    z-index: 0;
-    animation: drift ease-in-out infinite alternate;
-  }
-  .orb1 { width: 300px; height: 300px; background: rgba(140,80,220,0.18); top: -80px; left: -60px; animation-duration: 9s; }
-  .orb2 { width: 250px; height: 250px; background: rgba(180,120,255,0.12); bottom: -60px; right: -40px; animation-duration: 12s; }
-  .orb3 { width: 160px; height: 160px; background: rgba(210,170,255,0.1); top: 50%; left: 60%; animation-duration: 7s; }
-  @keyframes drift {
-    from { transform: translate(0,0); }
-    to   { transform: translate(20px,15px); }
-  }
+              /* ── Orbs ── */
+              .orb {
+                  position: fixed;
+                  border-radius: 50%;
+                  filter: blur(70px);
+                  pointer-events: none;
+                  z-index: 0;
+                  animation: drift ease-in-out infinite alternate;
+              }
 
-  /* ── Stars ── */
-  .stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
-  .star {
-    position: absolute; border-radius: 50%;
-    animation: twinkle ease-in-out infinite;
-  }
-  @keyframes twinkle {
-    0%,100% { opacity: 0.08; transform: scale(1); }
-    50%      { opacity: 0.85; transform: scale(1.3); }
-  }
+              .orb1 {
+                  width: 300px;
+                  height: 300px;
+                  background: rgba(140,80,220,0.18);
+                  top: -80px;
+                  left: -60px;
+                  animation-duration: 9s;
+              }
 
-  /* ── Petals ── */
-  .petals { position: fixed; inset: 0; pointer-events: none; z-index: 1; }
-  .petal {
-    position: absolute; top: -50px; opacity: 0;
-    animation: fall linear infinite;
-  }
-  @keyframes fall {
-    0%   { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.9; }
-    100% { transform: translateY(105vh) rotate(400deg) scale(0.7); opacity: 0; }
-  }
+              .orb2 {
+                  width: 250px;
+                  height: 250px;
+                  background: rgba(180,120,255,0.12);
+                  bottom: -60px;
+                  right: -40px;
+                  animation-duration: 12s;
+              }
 
-  /* ══════════════════════════
-     LOGIN PAGE
-  ══════════════════════════ */
-  #login-page {
-    position: relative; z-index: 10;
-    width: min(360px, 92vw);
-    padding: 48px 32px 40px;
-    text-align: center;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(190,150,255,0.22);
-    border-radius: 2px;
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    box-shadow: 0 0 80px rgba(150,90,255,0.08), inset 0 1px 0 rgba(255,255,255,0.06);
-    animation: fadeUp 0.9s ease forwards;
-  }
+              .orb3 {
+                  width: 160px;
+                  height: 160px;
+                  background: rgba(210,170,255,0.1);
+                  top: 50%;
+                  left: 60%;
+                  animation-duration: 7s;
+              }
 
-  #login-page::before, #login-page::after {
-    content: ''; position: absolute;
-    width: 20px; height: 20px;
-    border-color: rgba(180,130,255,0.4); border-style: solid;
-  }
-  #login-page::before { top: 12px; left: 12px; border-width: 1px 0 0 1px; }
-  #login-page::after  { bottom: 12px; right: 12px; border-width: 0 1px 1px 0; }
-  .lcorner-tr { position: absolute; top: 12px; right: 12px; width: 20px; height: 20px; border: 1px solid rgba(180,130,255,0.4); border-width: 1px 1px 0 0; }
-  .lcorner-bl { position: absolute; bottom: 12px; left: 12px; width: 20px; height: 20px; border: 1px solid rgba(180,130,255,0.4); border-width: 0 0 1px 1px; }
+              @keyframes drift {
+                  from {
+                      transform: translate(0,0);
+                  }
 
-  .lock-icon {
-    font-size: 34px; display: block; margin-bottom: 18px;
-    animation: fadeUp 0.9s ease forwards 0.2s; opacity: 0;
-  }
+                  to {
+                      transform: translate(20px,15px);
+                  }
+              }
 
-  .login-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px; font-weight: 600;
-    color: var(--lavender-pale);
-    margin-bottom: 6px;
-    opacity: 0; animation: fadeUp 0.9s ease forwards 0.35s;
-  }
+              /* ── Stars ── */
+              .stars {
+                  position: fixed;
+                  inset: 0;
+                  pointer-events: none;
+                  z-index: 0;
+              }
 
-  .login-sub {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic; font-size: 14px;
-    color: rgba(200,165,255,0.45);
-    margin-bottom: 32px;
-    opacity: 0; animation: fadeUp 0.9s ease forwards 0.45s;
-  }
+              .star {
+                  position: absolute;
+                  border-radius: 50%;
+                  animation: twinkle ease-in-out infinite;
+              }
 
-  .input-wrap {
-    position: relative; margin-bottom: 14px;
-    opacity: 0; animation: fadeUp 0.9s ease forwards 0.55s;
-  }
+              @keyframes twinkle {
+                  0%,100% {
+                      opacity: 0.08;
+                      transform: scale(1);
+                  }
 
-  .input-wrap input {
-    width: 100%;
-    padding: 13px 18px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(190,150,255,0.25);
-    border-radius: 2px;
-    color: var(--lavender-pale);
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    letter-spacing: 3px;
-    text-align: center;
-    outline: none;
-    transition: border-color 0.3s;
-    -webkit-appearance: none;
-  }
-  .input-wrap input::placeholder { letter-spacing: 2px; color: rgba(200,165,255,0.3); font-size: 13px; }
-  .input-wrap input:focus { border-color: rgba(190,150,255,0.6); }
+                  50% {
+                      opacity: 0.85;
+                      transform: scale(1.3);
+                  }
+              }
 
-  .error-msg {
-    font-size: 12px; letter-spacing: 1px;
-    color: rgba(255,150,150,0.7);
-    margin-bottom: 14px; min-height: 16px;
-    font-family: 'Lato', sans-serif;
-    opacity: 0; transition: opacity 0.3s;
-  }
-  .error-msg.show { opacity: 1; }
+              /* ── Petals ── */
+              .petals {
+                  position: fixed;
+                  inset: 0;
+                  pointer-events: none;
+                  z-index: 1;
+              }
 
-  .login-btn {
-    width: 100%;
-    padding: 13px;
-    background: rgba(180,130,255,0.15);
-    border: 1px solid rgba(190,150,255,0.4);
-    border-radius: 2px;
-    color: var(--lavender-light);
-    font-family: 'Lato', sans-serif;
-    font-size: 12px; font-weight: 400;
-    letter-spacing: 4px; text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.3s, border-color 0.3s;
-    opacity: 0; animation: fadeUp 0.9s ease forwards 0.65s;
-    -webkit-appearance: none;
-  }
-  .login-btn:active { background: rgba(180,130,255,0.28); }
+              .petal {
+                  position: absolute;
+                  top: -50px;
+                  opacity: 0;
+                  animation: fall linear infinite;
+              }
 
-  .hint-text {
-    margin-top: 20px;
-    font-size: 11px; letter-spacing: 2px;
-    color: rgba(200,165,255,0.2);
-    font-family: 'Lato', sans-serif;
-    opacity: 0; animation: fadeUp 0.9s ease forwards 0.75s;
-  }
+              @keyframes fall {
+                  0% {
+                      transform: translateY(0) rotate(0deg) scale(1);
+                      opacity: 0.9;
+                  }
 
-  /* ══════════════════════════
-     ANNIVERSARY PAGE
-  ══════════════════════════ */
-  #anniv-page {
-    display: none;
-    position: relative; z-index: 10;
-    width: min(420px, 92vw);
-    padding: 52px 36px 48px;
-    text-align: center;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(190,150,255,0.22);
-    border-radius: 2px;
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    box-shadow: 0 0 80px rgba(150,90,255,0.08), inset 0 1px 0 rgba(255,255,255,0.06);
-  }
-  #anniv-page::before, #anniv-page::after {
-    content: ''; position: absolute;
-    width: 20px; height: 20px;
-    border-color: rgba(180,130,255,0.4); border-style: solid;
-  }
-  #anniv-page::before { top: 12px; left: 12px; border-width: 1px 0 0 1px; }
-  #anniv-page::after  { bottom: 12px; right: 12px; border-width: 0 1px 1px 0; }
-  .acorner-tr { position: absolute; top: 12px; right: 12px; width: 20px; height: 20px; border: 1px solid rgba(180,130,255,0.4); border-width: 1px 1px 0 0; }
-  .acorner-bl { position: absolute; bottom: 12px; left: 12px; width: 20px; height: 20px; border: 1px solid rgba(180,130,255,0.4); border-width: 0 0 1px 1px; }
+                  100% {
+                      transform: translateY(105vh) rotate(400deg) scale(0.7);
+                      opacity: 0;
+                  }
+              }
 
-  .eyebrow {
-    font-size: 10px; font-weight: 300; letter-spacing: 4px;
-    color: rgba(200,165,255,0.5); text-transform: uppercase;
-    margin-bottom: 26px;
-  }
+              /* ══════════════════════════
+           LOGIN PAGE
+        ══════════════════════════ */
+              #login-page {
+                  position: relative;
+                  z-index: 10;
+                  width: min(360px, 92vw);
+                  padding: 48px 32px 40px;
+                  text-align: center;
+                  background: rgba(255,255,255,0.03);
+                  border: 1px solid rgba(190,150,255,0.22);
+                  border-radius: 2px;
+                  backdrop-filter: blur(18px);
+                  -webkit-backdrop-filter: blur(18px);
+                  box-shadow: 0 0 80px rgba(150,90,255,0.08), inset 0 1px 0 rgba(255,255,255,0.06);
+                  animation: fadeUp 0.9s ease forwards;
+              }
 
-  .heart-icon {
-    font-size: 34px; display: block; margin-bottom: 24px;
-    animation: heartbeat 2.4s ease-in-out infinite;
-  }
-  @keyframes heartbeat {
-    0%,100% { transform: scale(1); }
-    14%      { transform: scale(1.15); }
-    28%      { transform: scale(1); }
-    42%      { transform: scale(1.1); }
-  }
+                  #login-page::before, #login-page::after {
+                      content: '';
+                      position: absolute;
+                      width: 20px;
+                      height: 20px;
+                      border-color: rgba(180,130,255,0.4);
+                      border-style: solid;
+                  }
 
-  .for-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic; font-size: 14px;
-    color: rgba(210,180,255,0.4); letter-spacing: 2px;
-    margin-bottom: 8px;
-  }
+                  #login-page::before {
+                      top: 12px;
+                      left: 12px;
+                      border-width: 1px 0 0 1px;
+                  }
 
-  .name {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(36px, 10vw, 52px);
-    font-weight: 600; color: var(--lavender-pale);
-    line-height: 1.1; margin-bottom: 4px;
-  }
-  .name .surname { color: var(--lavender); }
+                  #login-page::after {
+                      bottom: 12px;
+                      right: 12px;
+                      border-width: 0 1px 1px 0;
+                  }
 
-  .divider {
-    display: flex; align-items: center; gap: 10px;
-    margin: 26px auto; width: 180px;
-  }
-  .divider-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(180,130,255,0.5)); }
-  .divider-line.r { background: linear-gradient(90deg, rgba(180,130,255,0.5), transparent); }
-  .divider-diamond { width: 5px; height: 5px; background: var(--lavender); transform: rotate(45deg); flex-shrink: 0; }
+              .lcorner-tr {
+                  position: absolute;
+                  top: 12px;
+                  right: 12px;
+                  width: 20px;
+                  height: 20px;
+                  border: 1px solid rgba(180,130,255,0.4);
+                  border-width: 1px 1px 0 0;
+              }
 
-  .message {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic; font-weight: 300;
-    font-size: clamp(15px, 4vw, 18px);
-    color: rgba(230,210,255,0.82);
-    line-height: 1.9; margin-bottom: 32px;
-  }
+              .lcorner-bl {
+                  position: absolute;
+                  bottom: 12px;
+                  left: 12px;
+                  width: 20px;
+                  height: 20px;
+                  border: 1px solid rgba(180,130,255,0.4);
+                  border-width: 0 0 1px 1px;
+              }
 
-  .tagline {
-    font-size: 10px; font-weight: 400; letter-spacing: 5px;
-    color: rgba(200,165,255,0.3); text-transform: uppercase;
-  }
+              .lock-icon {
+                  font-size: 34px;
+                  display: block;
+                  margin-bottom: 18px;
+                  animation: fadeUp 0.9s ease forwards 0.2s;
+                  opacity: 0;
+              }
 
-  .big-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 110px; font-weight: 600;
-    color: rgba(160,110,240,0.07);
-    position: absolute; bottom: 14px; right: 22px;
-    line-height: 1; pointer-events: none; user-select: none;
-  }
+              .login-title {
+                  font-family: 'Playfair Display', serif;
+                  font-size: 22px;
+                  font-weight: 600;
+                  color: var(--lavender-pale);
+                  margin-bottom: 6px;
+                  opacity: 0;
+                  animation: fadeUp 0.9s ease forwards 0.35s;
+              }
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
+              .login-sub {
+                  font-family: 'Cormorant Garamond', serif;
+                  font-style: italic;
+                  font-size: 14px;
+                  color: rgba(200,165,255,0.45);
+                  margin-bottom: 32px;
+                  opacity: 0;
+                  animation: fadeUp 0.9s ease forwards 0.45s;
+              }
 
-  .page-enter {
-    animation: fadeUp 0.9s ease forwards;
-  }
-</style>
+              .input-wrap {
+                  position: relative;
+                  margin-bottom: 14px;
+                  opacity: 0;
+                  animation: fadeUp 0.9s ease forwards 0.55s;
+              }
+
+                  .input-wrap input {
+                      width: 100%;
+                      padding: 13px 18px;
+                      background: rgba(255,255,255,0.05);
+                      border: 1px solid rgba(190,150,255,0.25);
+                      border-radius: 2px;
+                      color: var(--lavender-pale);
+                      font-family: 'Lato', sans-serif;
+                      font-size: 16px;
+                      letter-spacing: 3px;
+                      text-align: center;
+                      outline: none;
+                      transition: border-color 0.3s;
+                      -webkit-appearance: none;
+                  }
+
+                      .input-wrap input::placeholder {
+                          letter-spacing: 2px;
+                          color: rgba(200,165,255,0.3);
+                          font-size: 13px;
+                      }
+
+                      .input-wrap input:focus {
+                          border-color: rgba(190,150,255,0.6);
+                      }
+
+              .error-msg {
+                  font-size: 12px;
+                  letter-spacing: 1px;
+                  color: rgba(255,150,150,0.7);
+                  margin-bottom: 14px;
+                  min-height: 16px;
+                  font-family: 'Lato', sans-serif;
+                  opacity: 0;
+                  transition: opacity 0.3s;
+              }
+
+                  .error-msg.show {
+                      opacity: 1;
+                  }
+
+              .login-btn {
+                  width: 100%;
+                  padding: 13px;
+                  background: rgba(180,130,255,0.15);
+                  border: 1px solid rgba(190,150,255,0.4);
+                  border-radius: 2px;
+                  color: var(--lavender-light);
+                  font-family: 'Lato', sans-serif;
+                  font-size: 12px;
+                  font-weight: 400;
+                  letter-spacing: 4px;
+                  text-transform: uppercase;
+                  cursor: pointer;
+                  transition: background 0.3s, border-color 0.3s;
+                  opacity: 0;
+                  animation: fadeUp 0.9s ease forwards 0.65s;
+                  -webkit-appearance: none;
+              }
+
+                  .login-btn:active {
+                      background: rgba(180,130,255,0.28);
+                  }
+
+              .hint-text {
+                  margin-top: 20px;
+                  font-size: 11px;
+                  letter-spacing: 2px;
+                  color: rgba(200,165,255,0.2);
+                  font-family: 'Lato', sans-serif;
+                  opacity: 0;
+                  animation: fadeUp 0.9s ease forwards 0.75s;
+              }
+
+              /* ══════════════════════════
+           ANNIVERSARY PAGE
+        ══════════════════════════ */
+              #anniv-page {
+                  display: none;
+                  position: relative;
+                  z-index: 10;
+                  width: min(420px, 92vw);
+                  padding: 52px 36px 48px;
+                  text-align: center;
+                  background: rgba(255,255,255,0.03);
+                  border: 1px solid rgba(190,150,255,0.22);
+                  border-radius: 2px;
+                  backdrop-filter: blur(18px);
+                  -webkit-backdrop-filter: blur(18px);
+                  box-shadow: 0 0 80px rgba(150,90,255,0.08), inset 0 1px 0 rgba(255,255,255,0.06);
+              }
+
+                  #anniv-page::before, #anniv-page::after {
+                      content: '';
+                      position: absolute;
+                      width: 20px;
+                      height: 20px;
+                      border-color: rgba(180,130,255,0.4);
+                      border-style: solid;
+                  }
+
+                  #anniv-page::before {
+                      top: 12px;
+                      left: 12px;
+                      border-width: 1px 0 0 1px;
+                  }
+
+                  #anniv-page::after {
+                      bottom: 12px;
+                      right: 12px;
+                      border-width: 0 1px 1px 0;
+                  }
+
+              .acorner-tr {
+                  position: absolute;
+                  top: 12px;
+                  right: 12px;
+                  width: 20px;
+                  height: 20px;
+                  border: 1px solid rgba(180,130,255,0.4);
+                  border-width: 1px 1px 0 0;
+              }
+
+              .acorner-bl {
+                  position: absolute;
+                  bottom: 12px;
+                  left: 12px;
+                  width: 20px;
+                  height: 20px;
+                  border: 1px solid rgba(180,130,255,0.4);
+                  border-width: 0 0 1px 1px;
+              }
+
+              .eyebrow {
+                  font-size: 10px;
+                  font-weight: 300;
+                  letter-spacing: 4px;
+                  color: rgba(200,165,255,0.5);
+                  text-transform: uppercase;
+                  margin-bottom: 26px;
+              }
+
+              .heart-icon {
+                  font-size: 34px;
+                  display: block;
+                  margin-bottom: 24px;
+                  animation: heartbeat 2.4s ease-in-out infinite;
+              }
+
+              @keyframes heartbeat {
+                  0%,100% {
+                      transform: scale(1);
+                  }
+
+                  14% {
+                      transform: scale(1.15);
+                  }
+
+                  28% {
+                      transform: scale(1);
+                  }
+
+                  42% {
+                      transform: scale(1.1);
+                  }
+              }
+
+              .for-label {
+                  font-family: 'Cormorant Garamond', serif;
+                  font-style: italic;
+                  font-size: 14px;
+                  color: rgba(210,180,255,0.4);
+                  letter-spacing: 2px;
+                  margin-bottom: 8px;
+              }
+
+              .name {
+                  font-family: 'Playfair Display', serif;
+                  font-size: clamp(36px, 10vw, 52px);
+                  font-weight: 600;
+                  color: var(--lavender-pale);
+                  line-height: 1.1;
+                  margin-bottom: 4px;
+              }
+
+                  .name .surname {
+                      color: var(--lavender);
+                  }
+
+              .divider {
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin: 26px auto;
+                  width: 180px;
+              }
+
+              .divider-line {
+                  flex: 1;
+                  height: 1px;
+                  background: linear-gradient(90deg, transparent, rgba(180,130,255,0.5));
+              }
+
+                  .divider-line.r {
+                      background: linear-gradient(90deg, rgba(180,130,255,0.5), transparent);
+                  }
+
+              .divider-diamond {
+                  width: 5px;
+                  height: 5px;
+                  background: var(--lavender);
+                  transform: rotate(45deg);
+                  flex-shrink: 0;
+              }
+
+              .message {
+                  font-family: 'Cormorant Garamond', serif;
+                  font-style: italic;
+                  font-weight: 300;
+                  font-size: clamp(15px, 4vw, 18px);
+                  color: rgba(230,210,255,0.82);
+                  line-height: 1.9;
+                  margin-bottom: 32px;
+              }
+
+              .tagline {
+                  font-size: 10px;
+                  font-weight: 400;
+                  letter-spacing: 5px;
+                  color: rgba(200,165,255,0.3);
+                  text-transform: uppercase;
+              }
+
+              .big-num {
+                  font-family: 'Playfair Display', serif;
+                  font-size: 110px;
+                  font-weight: 600;
+                  color: rgba(160,110,240,0.07);
+                  position: absolute;
+                  bottom: 14px;
+                  right: 22px;
+                  line-height: 1;
+                  pointer-events: none;
+                  user-select: none;
+              }
+
+              @keyframes fadeUp {
+                  from {
+                      opacity: 0;
+                      transform: translateY(16px);
+                  }
+
+                  to {
+                      opacity: 1;
+                      transform: translateY(0);
+                  }
+              }
+
+              .page-enter {
+                  animation: fadeUp 0.9s ease forwards;
+              }
+
+              /* ── Music Button ── */
+              #music-btn {
+                  position: fixed;
+                  bottom: 24px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  z-index: 100;
+                  background: rgba(255,255,255,0.04);
+                  border: 1px solid rgba(190,150,255,0.3);
+                  border-radius: 2px;
+                  color: rgba(200,165,255,0.6);
+                  font-family: 'Lato', sans-serif;
+                  font-size: 10px;
+                  font-weight: 400;
+                  letter-spacing: 3px;
+                  text-transform: uppercase;
+                  padding: 9px 18px;
+                  cursor: pointer;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  backdrop-filter: blur(10px);
+                  -webkit-backdrop-filter: blur(10px);
+                  transition: background 0.3s, border-color 0.3s, color 0.3s;
+                  opacity: 1;
+              }
+
+                  #music-btn:hover {
+                      background: rgba(180,130,255,0.1);
+                      border-color: rgba(190,150,255,0.55);
+                      color: rgba(220,190,255,0.85);
+                  }
+
+                  #music-btn .music-icon {
+                      font-size: 13px;
+                      animation: none;
+                  }
+
+                  #music-btn.playing .music-icon {
+                      animation: pulse 1.8s ease-in-out infinite;
+                  }
+
+              @keyframes pulse {
+                  0%,100% {
+                      opacity: 1;
+                  }
+
+                  50% {
+                      opacity: 0.4;
+                  }
+              }
+    </style>
 </head>
 <body>
 
-<div class="orb orb1"></div>
-<div class="orb orb2"></div>
-<div class="orb orb3"></div>
-<div class="stars" id="stars"></div>
-<div class="petals" id="petals"></div>
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="themesong.mp3" type="audio/mpeg">
+    </audio>
 
-<!-- LOGIN -->
-<div id="login-page">
-  <div class="lcorner-tr"></div>
-  <div class="lcorner-bl"></div>
-  <span class="lock-icon">🔒</span>
-  <h1 class="login-title">Something awaits</h1>
-  <p class="login-sub">enter the key to open your gift</p>
-  <div class="input-wrap">
-    <input type="password" id="pwd-input" inputmode="numeric" maxlength="20" placeholder="enter password" autocomplete="off" />
-  </div>
-  <p class="error-msg" id="error-msg">incorrect password — try again</p>
-  <button class="login-btn" id="login-btn">Open ✦</button>
-  <p class="hint-text">this was made just for you 💜</p>
-</div>
+    <!-- Music Control Button -->
+    <button id="music-btn" aria-label="Toggle music">
+        <span class="music-icon">♪</span>
+        <span id="music-label">music</span>
+    </button>
 
-<!-- ANNIVERSARY -->
-<div id="anniv-page">
-  <div class="acorner-tr"></div>
-  <div class="acorner-bl"></div>
-  <p class="eyebrow">✦ &nbsp; six years together &nbsp; ✦</p>
-  <span class="heart-icon">💜</span>
-  <p class="for-label">for</p>
-  <h1 class="name">Rhian <span class="surname">Levy</span></h1>
-  <div class="divider">
-    <div class="divider-line"></div>
-    <div class="divider-diamond"></div>
-    <div class="divider-line r"></div>
-  </div>
-  <p class="message">
-    Six years of laughter, love,<br>
-    and every little moment in between.<br>
-    Here's to forever with you.
-  </p>
-  <p class="tagline">Happy Anniversary</p>
-  <span class="big-num">6</span>
-</div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <div class="stars" id="stars"></div>
+    <div class="petals" id="petals"></div>
 
-<script>
-  // Stars
-  const starsEl = document.getElementById('stars');
-  const starColors = ['#e0c8ff','#c9a0f5','#b57bee','#ffffff','#d4b8ff','#f0e6ff'];
-  for (let i = 0; i < 100; i++) {
-    const s = document.createElement('div');
-    s.className = 'star';
-    const size = 1 + Math.random() * 2.5;
-    s.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;top:${Math.random()*100}%;background:${starColors[Math.floor(Math.random()*starColors.length)]};animation-duration:${2+Math.random()*5}s;animation-delay:${Math.random()*6}s;`;
-    starsEl.appendChild(s);
-  }
+    <!-- LOGIN -->
+    <div id="login-page">
+        <div class="lcorner-tr"></div>
+        <div class="lcorner-bl"></div>
+        <span class="lock-icon">🔒</span>
+        <h1 class="login-title">Something awaits</h1>
+        <p class="login-sub">enter the key to open your gift</p>
+        <div class="input-wrap">
+            <input type="password" id="pwd-input" inputmode="numeric" maxlength="20" placeholder="enter password" autocomplete="off" />
+        </div>
+        <p class="error-msg" id="error-msg">incorrect password — try again</p>
+        <button class="login-btn" id="login-btn">Open ✦</button>
+        <p class="hint-text">this was made just for you 💜</p>
+    </div>
 
-  // Petals
-  const petalsEl = document.getElementById('petals');
-  const petalSet = ['🌸','💜','🪻','✿','❀'];
-  for (let i = 0; i < 18; i++) {
-    const p = document.createElement('div');
-    p.className = 'petal';
-    p.textContent = petalSet[Math.floor(Math.random() * petalSet.length)];
-    p.style.cssText = `left:${Math.random()*100}%;animation-duration:${7+Math.random()*9}s;animation-delay:${Math.random()*12}s;font-size:${12+Math.random()*13}px;`;
-    petalsEl.appendChild(p);
-  }
+    <!-- ANNIVERSARY -->
+    <div id="anniv-page">
+        <div class="acorner-tr"></div>
+        <div class="acorner-bl"></div>
+        <p class="eyebrow">✦ &nbsp; six years together &nbsp; ✦</p>
+        <span class="heart-icon">💜</span>
+        <p class="for-label">for</p>
+        <h1 class="name">Rhian <span class="surname">Levy</span></h1>
+        <div class="divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond"></div>
+            <div class="divider-line r"></div>
+        </div>
+        <p class="message">
+            Six years of laughter, love,<br>
+            and every little moment in between.<br>
+            Here's to forever with you.
+        </p>
+        <p class="tagline">Happy Anniversary</p>
+        <span class="big-num">6</span>
+    </div>
 
-  // Login logic
-  const PASSWORD = '07302021';
-  const btn = document.getElementById('login-btn');
-  const input = document.getElementById('pwd-input');
-  const errMsg = document.getElementById('error-msg');
+    <script>
+        // Stars
+        const starsEl = document.getElementById('stars');
+        const starColors = ['#e0c8ff', '#c9a0f5', '#b57bee', '#ffffff', '#d4b8ff', '#f0e6ff'];
+        for (let i = 0; i < 100; i++) {
+            const s = document.createElement('div');
+            s.className = 'star';
+            const size = 1 + Math.random() * 2.5;
+            s.style.cssText = `width:${size}px;height:${size}px;left:${Math.random() * 100}%;top:${Math.random() * 100}%;background:${starColors[Math.floor(Math.random() * starColors.length)]};animation-duration:${2 + Math.random() * 5}s;animation-delay:${Math.random() * 6}s;`;
+            starsEl.appendChild(s);
+        }
 
-  function tryLogin() {
-    if (input.value === PASSWORD) {
-      document.getElementById('login-page').style.display = 'none';
-      const ap = document.getElementById('anniv-page');
-      ap.style.display = 'block';
-      ap.classList.add('page-enter');
-    } else {
-      errMsg.classList.add('show');
-      input.value = '';
-      input.focus();
-      setTimeout(() => errMsg.classList.remove('show'), 2500);
-    }
-  }
+        // Petals
+        const petalsEl = document.getElementById('petals');
+        const petalSet = ['🌸', '💜', '🪻', '✿', '❀'];
+        for (let i = 0; i < 18; i++) {
+            const p = document.createElement('div');
+            p.className = 'petal';
+            p.textContent = petalSet[Math.floor(Math.random() * petalSet.length)];
+            p.style.cssText = `left:${Math.random() * 100}%;animation-duration:${7 + Math.random() * 9}s;animation-delay:${Math.random() * 12}s;font-size:${12 + Math.random() * 13}px;`;
+            petalsEl.appendChild(p);
+        }
 
-  btn.addEventListener('click', tryLogin);
-  input.addEventListener('keydown', e => { if (e.key === 'Enter') tryLogin(); });
-</script>
+        // Login logic
+        const PASSWORD = '07302021';
+        const btn = document.getElementById('login-btn');
+        const input = document.getElementById('pwd-input');
+        const errMsg = document.getElementById('error-msg');
+
+        function tryLogin() {
+            if (input.value === PASSWORD) {
+                document.getElementById('login-page').style.display = 'none';
+                const ap = document.getElementById('anniv-page');
+                ap.style.display = 'block';
+                ap.classList.add('page-enter');
+                if (!musicStarted) startMusic();
+            } else {
+                errMsg.classList.add('show');
+                input.value = '';
+                input.focus();
+                setTimeout(() => errMsg.classList.remove('show'), 2500);
+            }
+        }
+
+        btn.addEventListener('click', tryLogin);
+        input.addEventListener('keydown', e => { if (e.key === 'Enter') tryLogin(); });
+
+        // Music
+        const audio = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-btn');
+        const musicLabel = document.getElementById('music-label');
+        let musicStarted = false;
+
+        function startMusic() {
+            audio.volume = 0;
+            audio.play().then(() => {
+                musicBtn.classList.add('playing');
+                musicLabel.textContent = 'playing';
+                fadeIn();
+            }).catch(() => { });
+            musicStarted = true;
+        }
+
+        function fadeIn() {
+            let v = 0;
+            const interval = setInterval(() => {
+                v = Math.min(v + 0.02, 0.55);
+                audio.volume = v;
+                if (v >= 0.55) clearInterval(interval);
+            }, 80);
+        }
+
+        musicBtn.addEventListener('click', () => {
+            if (!musicStarted) {
+                startMusic();
+            } else if (audio.paused) {
+                audio.play();
+                musicBtn.classList.add('playing');
+                musicLabel.textContent = 'playing';
+            } else {
+                audio.pause();
+                musicBtn.classList.remove('playing');
+                musicLabel.textContent = 'paused';
+            }
+        });
+
+        // Auto-start on first interaction
+        document.addEventListener('click', () => {
+            if (!musicStarted) startMusic();
+        }, { once: true });
+
+    </script>
 </body>
 </html>
